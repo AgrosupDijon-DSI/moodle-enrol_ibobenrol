@@ -196,14 +196,13 @@ class enrol_ibobenrol_plugin extends enrol_plugin {
 
                 $badge = $DB->get_record('local_ibob_badges', ['id' => $badgeid], '*', MUST_EXIST);
 
-                $imageurl = moodle_url::make_pluginfile_url($context->id, 'badges', 'badgeimage', $badge->id, '/', 'f2', false);
+                $imageurl = $badge->image;
                 // Appending a random parameter to image link to force the browser to reload the image.
-                $imageurl->param('refresh', rand(1, 10000));
-                $attributes = ['src' => $imageurl, 'alt' => s($badge->name), 'class' => 'activatebadge'];
+                $attributes = ['src' => $imageurl, 'alt' => s($badge->name), 'class' => 'ibobenrol-activatebadge'];
 
                 $name = html_writer::tag('span', $badge->name, ['class' => 'badge-name']);
                 $image = html_writer::empty_tag('img', $attributes);
-                $url = new moodle_url('/badges/view.php', ['type' => 1]);
+                $url = new moodle_url($badge->image, ['type' => 1]);
 
                 $badgeout = html_writer::link($url, $image.$name, ['title' => $badge->name, 'class' => 'requiredbadge']);
 
