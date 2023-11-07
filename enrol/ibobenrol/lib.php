@@ -197,7 +197,6 @@ class enrol_ibobenrol_plugin extends enrol_plugin {
                 $badge = $DB->get_record('local_ibob_badges', ['id' => $badgeid], '*', MUST_EXIST);
 
                 $imageurl = $badge->image;
-                // Appending a random parameter to image link to force the browser to reload the image.
                 $attributes = ['src' => $imageurl, 'alt' => s($badge->name), 'class' => 'ibobenrol-activatebadge'];
 
                 $name = html_writer::tag('span', $badge->name, ['class' => 'badge-name']);
