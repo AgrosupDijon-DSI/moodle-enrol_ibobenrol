@@ -85,7 +85,7 @@ class enrol_ibobenrol_plugin extends enrol_plugin {
      * @param stdClass $instance
      * @return bool
      */
-    public function allow_manage(stdClass $instance):bool {
+    public function allow_manage(stdClass $instance): bool {
         // Users with manage cap may tweak period and status.
         return true;
     }
@@ -96,7 +96,7 @@ class enrol_ibobenrol_plugin extends enrol_plugin {
      * @param stdClass $instance
      * @return void
      */
-    public function add_course_navigation($instancesnode, stdClass $instance):void {
+    public function add_course_navigation($instancesnode, stdClass $instance): void {
         if ($instance->enrol !== 'ibobenrol') {
              throw new coding_exception('Invalid enrol instance type!');
         }
@@ -115,7 +115,7 @@ class enrol_ibobenrol_plugin extends enrol_plugin {
      * @param stdClass $instance
      * @return bool
      */
-    public function can_hide_show_instance($instance):bool {
+    public function can_hide_show_instance($instance): bool {
         $context = context_course::instance($instance->courseid);
         return has_capability('enrol/ibobenrol:config', $context);
     }
@@ -142,7 +142,7 @@ class enrol_ibobenrol_plugin extends enrol_plugin {
      * @param stdClass $instance
      * @return bool
      */
-    public function can_delete_instance($instance):bool {
+    public function can_delete_instance($instance): bool {
         $context = context_course::instance($instance->courseid);
         return has_capability('enrol/ibobenrol:config', $context);
     }
@@ -220,7 +220,7 @@ class enrol_ibobenrol_plugin extends enrol_plugin {
      * @param array $badges
      * @return bool
      */
-    public function check_required_badges(int $userid, array $badges):bool {
+    public function check_required_badges(int $userid, array $badges): bool {
         global $DB;
         $access = false;
         foreach ($badges as $badgeid) {
@@ -257,7 +257,7 @@ class enrol_ibobenrol_plugin extends enrol_plugin {
      * @param stdClass $ue A user enrolment object
      * @return array An array of user_enrolment_actions
      */
-    public function get_user_enrolment_actions(course_enrolment_manager $manager, $ue):array {
+    public function get_user_enrolment_actions(course_enrolment_manager $manager, $ue): array {
         $actions = [];
         $context = $manager->get_context();
         $instance = $ue->enrolmentinstance;
@@ -277,7 +277,7 @@ class enrol_ibobenrol_plugin extends enrol_plugin {
      * @param stdClass $instance
      * @return array
      */
-    public function get_action_icons(stdClass $instance):array {
+    public function get_action_icons(stdClass $instance): array {
         global $OUTPUT;
 
         if ($instance->enrol !== 'ibobenrol') {
