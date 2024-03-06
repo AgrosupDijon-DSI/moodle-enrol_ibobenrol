@@ -47,7 +47,7 @@ class enrol_ibobenrol_plugin extends enrol_plugin {
      * @param array $instances all enrol instances of this type in one course
      * @return array of pix_icon
      */
-    public function get_info_icons(array $instances):array {
+    public function get_info_icons(array $instances): array {
         $key = false;
         $nokey = false;
         foreach ($instances as $instance) {
@@ -75,7 +75,7 @@ class enrol_ibobenrol_plugin extends enrol_plugin {
      * @param stdClass $instance
      * @return bool
      */
-    public function allow_unenrol(stdClass $instance):bool {
+    public function allow_unenrol(stdClass $instance): bool {
         // Users with unenrol cap may unenrol other users manually.
         return true;
     }
