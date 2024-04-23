@@ -12,6 +12,11 @@ Access to the course is thus open to users who hold one or more of these Open Ba
 
 The second plugin (local_ibob) manages notifications and emails sent to users, as well as the retrieval of public Open Badges stored in users' Open Badge Passport accounts and the updating of profiles in the Moodle platform via scheduled tasks.
 
+## Changelog history ##
+04/17/24  F. Grebot      version 1.0 released.
+04/23/24  F. Grebot      version 2.0 released.
+                         Implementation of a filter for the badges list, when you had the enrolment method.
+
 ## Functionning steps ##
 ### First step ###
 The administrator must enable the new enrolment method (Open Badges Enrolment) in administration>Plugins>Manage enrol plugins
