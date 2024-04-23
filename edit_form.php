@@ -24,6 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+require_once($CFG->dirroot . '/user/filters/lib.php');
 require_once($CFG->libdir.'/formslib.php');
 
 /**
@@ -41,14 +42,19 @@ class enrol_ibobenrol_edit_form extends moodleform {
      * @return void
      */
     public function definition() {
-        global $DB;
-
+        global $DB, $PAGE;
+        $PAGE->requires->js_call_amd('enrol_ibobenrol/filterbadges', 'init');
+        // Initialize the form object.
         $mform = $this->_form;
 
         list($instance, $plugin, $context) = $this->_customdata;
 
         if ($badges = \local_ibob\ibob_badges::get_records([], 'name')) {
 
+            $mform->addElement('header', 'newfilter', get_string('newfilter', 'filters'));
+            $mform->addElement('text', 'badge_filter', get_string('select_filter_badges', 'enrol_ibobenrol'));
+            $mform->setType('badge_filter', PARAM_TEXT);
+            $mform->addElement('header', 'liste_badges', get_string('selectbadges', 'enrol_ibobenrol'));
             $badgeslist = [];
             foreach ($badges as $badge) {
                     $badgeslist[$badge->get('id')] = $badge->get('name');
