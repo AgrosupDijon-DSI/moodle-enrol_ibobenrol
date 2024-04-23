@@ -24,7 +24,7 @@
  */
 
 $string['pluginname'] = 'Open Badges Enrolment';
-$string['select_filter_badges'] = 'Filter the badges list below (in name and description)';
+$string['select_filter_badges'] = 'Filter the badges list below (from name and description)';
 $string['selectbadges'] = 'Required Open badges for enrolment';
 $string['nobadgesfound'] = 'No available Open badges found.';
 $string['nobadgesconfigured'] = 'No required Open badges for badge enrolment configured. Please contact a course administrator.';
