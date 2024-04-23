@@ -35,7 +35,7 @@ namespace enrol_ibobenrol\forms;
 class enrol_ibobenrol_form extends \moodleform {
 
     /**
-     * @var
+     * @var $instance
      */
     protected $instance;
 
