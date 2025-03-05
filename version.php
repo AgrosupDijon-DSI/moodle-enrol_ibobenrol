@@ -24,8 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'enrol_ibobenrol'; // Full name of the plugin (used for diagnostics).
-$plugin->release   = '2.0 (2023051830)';
-$plugin->version   = 2023051830;         // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires  = 2019052002;         // Requires this Moodle version (3.9).
+$plugin->component = 'enrol_ibobenrol';
+$plugin->release   = '3.0 (2025030500)';
+$plugin->version   = 2025030500;
+$plugin->requires  = 2024100700;         // Requires this Moodle version (4.5).
 $plugin->maturity  = MATURITY_STABLE;

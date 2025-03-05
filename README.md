@@ -14,8 +14,12 @@ The second plugin (local_ibob) manages notifications and emails sent to users, a
 
 ## Changelog history ##
 04/17/24  F. Grebot      version 1.0 released.
+
 04/23/24  F. Grebot      version 2.0 released.
-                         Implementation of a filter for the badges list, when you had the enrolment method.
+
+03/03/25 F. Grebot      version 3.0 released.
+
+New version for Moodle 4.5
 
 ## Functionning steps ##
 ### First step ###
@@ -32,7 +36,7 @@ When the teacher save the configuration of this course, emails and notification 
 
 ## License ##
 
-2024 Frédéric Grebot <frederic.grebot@agrosupdijon.fr>
+2025 Frédéric Grebot <frederic.grebot@agrosupdijon.fr>
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
